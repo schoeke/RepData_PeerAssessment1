@@ -205,7 +205,7 @@ qplot(daySteps$sumSteps,
 cleaned_data$weekday &lt;- &quot;Weekday&quot;
 cleaned_data[cleaned_data$dayname %in% c(&quot;Sun&quot;, &quot;Sat&quot;),5] &lt;- &quot;Weekend&quot;
 cleaned_data$weekday &lt;- factor(cleaned_data$weekday)</code></pre>
-<p><strong>2. Make a panel plot containing a time series plot (i.e. type = “l”) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). </strong></p>
+<p><strong>2. Make a panel plot containing a time series plot (i.e. type = “l”) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).</strong></p>
 <pre class="r"><code>library(lattice)
 
 # Plotting intervals again, so let's make a useful variable out of it.
