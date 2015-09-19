@@ -227,7 +227,7 @@ median(daySteps$sumSteps)
 ```
 ## [1] 10766.19
 ```
-The slight differnce between mean and median has been eliminated. By using the mean to impudate the data, the mean and median are now the same.
+The values for median and mean increased strongly. The median not as much as the mean, showing it to be more robust against outliers and missing values.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 For this part the weekdays() function may be of some help here. Use the dataset with the filled-in missing values for this part.
