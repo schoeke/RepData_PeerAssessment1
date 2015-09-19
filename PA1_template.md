@@ -261,7 +261,7 @@ final_plot <- aggregate(cleaned_data$steps,
                         )
 
 xyplot(data = final_plot, x ~ Time | Weekday, type = "l", 
-       ylab = "Count of Steps", xlab = "Time in hours of the day")
+       ylab = "Count of Steps", xlab = "Time in hours of the day", layout = c(1,2))
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
