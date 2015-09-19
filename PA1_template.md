@@ -26,7 +26,7 @@ For this part of the assignment, you can ignore the missing values in the datase
 library(dplyr)
 dailySteps <- act_df %>% 
     group_by(date) %>%
-    summarize(totSteps = sum(steps))
+    summarize(totSteps = sum(steps, na.rm = TRUE))
 
 dailySteps
 ```
@@ -35,14 +35,14 @@ dailySteps
 ## Source: local data frame [61 x 2]
 ## 
 ##          date totSteps
-## 1  2012-10-01       NA
+## 1  2012-10-01        0
 ## 2  2012-10-02      126
 ## 3  2012-10-03    11352
 ## 4  2012-10-04    12116
 ## 5  2012-10-05    13294
 ## 6  2012-10-06    15420
 ## 7  2012-10-07    11015
-## 8  2012-10-08       NA
+## 8  2012-10-08        0
 ## 9  2012-10-09    12811
 ## 10 2012-10-10     9900
 ## ..        ...      ...
@@ -70,7 +70,7 @@ mean(dailySteps$totSteps, na.rm = T)
 ```
 
 ```
-## [1] 10766.19
+## [1] 9354.23
 ```
 
 ```r
@@ -78,7 +78,7 @@ median(dailySteps$totSteps, na.rm = T)
 ```
 
 ```
-## [1] 10765
+## [1] 10395
 ```
 
 ## What is the average daily activity pattern?

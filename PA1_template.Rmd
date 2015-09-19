@@ -28,7 +28,7 @@ For this part of the assignment, you can ignore the missing values in the datase
 library(dplyr)
 dailySteps <- act_df %>% 
     group_by(date) %>%
-    summarize(totSteps = sum(steps))
+    summarize(totSteps = sum(steps, na.rm = TRUE))
 
 dailySteps
 ```
@@ -141,7 +141,7 @@ mean(daySteps$sumSteps)
 median(daySteps$sumSteps)
 
 ```
-The slight differnce between mean and median has been eliminated. By using the mean to impudate the data, the mean and median are now the same.
+The values for median and mean increased strongly. The median not as much as the mean, showing it to be more robust against outliers and missing values.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 For this part the weekdays() function may be of some help here. Use the dataset with the filled-in missing values for this part.
